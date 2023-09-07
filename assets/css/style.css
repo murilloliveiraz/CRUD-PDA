@@ -20,7 +20,7 @@ body{
 main {
     background: #f6f6f6;
     width: 600px;
-    height: 600px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     padding: 20px 20px;
@@ -89,4 +89,23 @@ span{
     display: flex;
     align-items: center;
     padding-left: 8px;
+}
+
+@media screen and (max-width: 760px) {
+    main{
+        width: 90%;
+    }
+
+    h2{
+        font-size:20px;
+        margin-bottom: 20px;
+    }
+
+    input{
+        width: 80%;
+    }
+
+    span{
+        width: 80%;
+    }
 }

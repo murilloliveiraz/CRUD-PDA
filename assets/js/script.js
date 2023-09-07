@@ -48,11 +48,12 @@ $form.addEventListener('submit', function criaTarefa(e) {
 //DELETE
 document.querySelector('.listaDeTarefas').addEventListener('click', function (e) {
     const elementoAtual = e.target;
-    const botaoDeletar = e.target.classList.contains('btn-delete');
+    const botaoDeletar = e.target.classList.contains('icon');
     if(botaoDeletar){
         const id = elementoAtual.parentNode.getAttribute('data-id');
         miniTwitter.deletePost(id);
-        elementoAtual.parentNode.remove();
+        const atual = elementoAtual.parentNode;
+        atual.parentNode.remove();
     }
 })
 
